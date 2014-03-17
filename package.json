@@ -1,0 +1,40 @@
+{
+  "name":           "uupaa.foo.js",
+  "version":        "0.0.0",
+  "description":    "The WebModule example.",
+  "url":            "https://github.com/uupaa/Foo.js",
+  "keywords":       ["Foo", "util", "uupaa", "WebModule"],
+  "repository": {
+    "type":         "git",
+    "url":          "https://github.com/uupaa/Foo.js.git"
+  },
+  "scripts": {
+    "watch":        "node node_modules/uupaa.watch.js --verbose --action build ./lib/Foo.js",
+    "build":        "node node_modules/uupaa.minify.js --output ./lib/Foo.min.js --verbose --keep --pretty ./lib/Foo.js",
+    "build-simple": "node node_modules/uupaa.minify.js --output ./lib/Foo.min.js --verbose --keep --pretty --nowrap --simple ./lib/Foo.js",
+    "build-release":"node node_modules/uupaa.minify.js --output ./lib/Foo.min.js --verbose --build all",
+    "test":         "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js; open test/index.html",
+    "lint":         "node lint/plato.js; open lint/plato/index.html"
+  },
+  "build": {
+    "all": { "lib/Foo.js": "" },
+    "node": { },
+    "worker": { },
+    "browser": { }
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "uupaa.valid.js":   "",
+    "uupaa.help.js":    "",
+    "uupaa.task.js":    "",
+    "uupaa.test.js":    "",
+    "uupaa.watch.js":   "",
+    "uupaa.minify.js":  ""
+  },
+  "lib":            "./lib/",
+  "main":           "./index.js",
+  "author":         "uupaa <uupaa.js@gmail.com>",
+  "license":        "MIT",
+  "contributors":   []
+}
