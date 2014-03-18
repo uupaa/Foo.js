@@ -5,7 +5,7 @@ The WebModule example.
 
 # Document
 
-https://github.com/uupaa/Foo.js/wiki/Foo.js
+https://github.com/uupaa/Foo.js/wiki/Foo
 
 # How to use
 
