@@ -5,12 +5,12 @@
 onmessage = function(event) {
     var baseDir = event.data.baseDir;
 
+    importScripts(baseDir + "../node_modules/uupaa.console.js/lib/Console.js");
     importScripts(baseDir + "../node_modules/uupaa.valid.js/lib/Valid.js");
-    importScripts(baseDir + "../node_modules/uupaa.help.js/lib/Help.js");
     importScripts(baseDir + "../node_modules/uupaa.task.js/lib/Task.js");
     importScripts(baseDir + "../node_modules/uupaa.test.js/lib/Test.js");
     importScripts(baseDir + "../lib/Foo.js");
-    importScripts(baseDir + "../lib/Foo.min.js");
+    importScripts(baseDir + "../release/Foo.min.js");
     importScripts(baseDir + "./test.js");
 
     self.postMessage({ error: self.errorMessage || "" });
@@ -22,7 +22,7 @@ onmessage = function(event) {
 <script src="../node_modules/uupaa.task.js/lib/Task.js"></script>
 <script src="../node_modules/uupaa.test.js/lib/Test.js"></script>
 <script src="../lib/Foo.js"></script>
-<script src="../lib/Foo.min.js"></script>
+<script src="../release/Foo.min.js"></script>
 <script src="./test.js"></script>
 </body></html>
 

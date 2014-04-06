@@ -20,12 +20,12 @@ function testFoo_value(next) {
 
     var result = new Foo(123.4).value();
 
-    if (result !== 123.4) {
-        console.log("testFoo_value ng");
-        next && next.miss(); // see Task.js
-    } else {
+    if (result === 123.4) {
         console.log("testFoo_value ok");
-        next && next.pass(); // see Task.js
+        next && next.pass();
+    } else {
+        console.error("testFoo_value ng");
+        next && next.miss();
     }
 }
 
@@ -36,12 +36,12 @@ function testFoo_isNumber(next) {
             new Foo(123.0).isNumber()   // true
         ];
 
-    if (/false/.test(result.join())) {
-        console.log("testFoo_isNumber ng");
-        next && next.miss();
-    } else {
+    if (!/false/.test(result.join())) {
         console.log("testFoo_isNumber ok");
         next && next.pass();
+    } else {
+        console.error("testFoo_isNumber ng");
+        next && next.miss();
     }
 }
 
@@ -52,12 +52,12 @@ function testFoo_isInteger(next) {
             new Foo(123.0).isInteger()  // true
         ];
 
-    if (/false/.test(result.join())) {
-        console.log("testFoo_isInteger ng");
-        next && next.miss();
-    } else {
+    if (!/false/.test(result.join())) {
         console.log("testFoo_isInteger ok");
         next && next.pass();
+    } else {
+        console.error("testFoo_isInteger ng");
+        next && next.miss();
     }
 }
 

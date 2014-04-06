@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.foo.js",
-  "version":        "0.0.1",
+  "version":        "0.0.2",
   "description":    "The WebModule example.",
   "url":            "https://github.com/uupaa/Foo.js",
   "keywords":       ["Foo", "util", "uupaa", "WebModule"],
@@ -18,11 +18,12 @@
   },
   "x-build": {
     "inputs":       ["lib/Foo.js"],
-    "output":       "lib/Foo.min.js"
+    "output":       "release/Foo.min.js"
   },
   "dependencies": {
   },
   "devDependencies": {
+    "uupaa.console.js": "",
     "uupaa.valid.js":   "",
     "uupaa.help.js":    "",
     "uupaa.task.js":    "",
