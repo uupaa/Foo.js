@@ -2,7 +2,10 @@
 Foo.js
 =========
 
+![](https://api.travis-ci.org/uupaa/Foo.js.png)
+
 Foo.js description.
+
 
 # Document
 
@@ -62,5 +65,4 @@ console.log( Foo() );
 5. Lint
 
     `$ npm run lint`
-
 
