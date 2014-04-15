@@ -32,6 +32,7 @@
     "uupaa.test.js":    "",
     "uupaa.watch.js":   "",
     "uupaa.plato.js":   "",
+    "closure-compiler": "",
     "uupaa.minify.js":  ""
   },
   "lib":            "./lib/",
