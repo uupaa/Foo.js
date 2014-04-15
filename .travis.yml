@@ -2,7 +2,8 @@ language: node_js
 node_js:
     - "0.10"
 before_script:
-    - npm install
+    - "npm install"
+    - "npm run build"
 script:
     - "npm run test-node"
 
