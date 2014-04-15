@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.foo.js",
-  "version":        "0.0.5",
+  "version":        "0.0.6",
   "description":    "The WebModule example.",
   "url":            "https://github.com/uupaa/Foo.js",
   "keywords":       ["Foo", "util", "uupaa", "WebModule"],

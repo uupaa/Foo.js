@@ -2,7 +2,7 @@
 Foo.js
 =========
 
-![](https://api.travis-ci.org/uupaa/Foo.js.png)
+![](https://travis-ci.org/uupaa/Foo.js.png)
 
 Foo.js description.
 
