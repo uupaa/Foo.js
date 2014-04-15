@@ -42,7 +42,6 @@ console.log( Foo() );
 1. Install development dependency tools
 
     ```sh
-    $ brew install closure-compiler
     $ brew install node
     $ npm install -g plato
     ```
