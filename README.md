@@ -6,12 +6,12 @@ Foo.js
 
 Foo.js description.
 
-
 # Document
 
-- https://github.com/uupaa/Foo.js/wiki/Foo
-- https://github.com/uupaa/WebModule ([Slide](http://uupaa.github.io/Slide/slide/WebModule/index.html))
-- https://github.com/uupaa/Help.js ([Slide](http://uupaa.github.io/Slide/slide/Help.js/index.html))
+- [WebModule](https://github.com/uupaa/WebModule) ([Slide](http://uupaa.github.io/Slide/slide/WebModule/index.html))
+- [Development](https://github.com/uupaa/WebModule/wiki/Development)
+- [Foo.js wiki](https://github.com/uupaa/Foo.js/wiki/Foo)
+
 
 # How to use
 
@@ -36,33 +36,4 @@ var Foo = require("lib/Foo.js");
 
 console.log( Foo() );
 ```
-
-# for Developers
-
-1. Install development dependency tools
-
-    ```sh
-    $ brew install node
-    $ npm install -g plato
-    ```
-
-2. Clone Repository and Install
-
-    ```sh
-    $ git clone git@github.com:uupaa/Foo.js.git
-    $ cd Foo.js
-    $ npm install
-    ```
-
-3. Build and Minify
-
-    `$ npm run build`
-
-4. Test
-
-    `$ npm run test`
-
-5. Lint
-
-    `$ npm run lint`
 
