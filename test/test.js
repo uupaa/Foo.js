@@ -1,4 +1,5 @@
 new Test().add([
+        testFoo_failure,
         testFoo_value,
         testFoo_isNumber,
         testFoo_isInteger,
@@ -15,6 +16,12 @@ new Test().add([
             });
         }
     });
+
+function testFoo_failure(next) {
+
+        console.error("testFoo_failure ng");
+        next && next.miss();
+}
 
 function testFoo_value(next) {
 
