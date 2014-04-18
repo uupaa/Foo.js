@@ -1,5 +1,5 @@
 new Test().add([
-        testFoo_failure,
+//      testFoo_failure,
         testFoo_value,
         testFoo_isNumber,
         testFoo_isInteger,
