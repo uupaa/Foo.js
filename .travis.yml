@@ -2,12 +2,9 @@ language: node_js
 node_js:
     - "0.10"
 before_script:
-    - "npm bin -g"
-    - "npm root -g"
-    - export NODE_PATH="/usr/local/lib/node_modules"
-    - "npm install -g uupaa.compile.js"
     - "npm install -g plato"
     - "npm install"
+    - "npm install uupaa.compile.js"
     - "npm run build"
 script:
     - "npm run test-node"
