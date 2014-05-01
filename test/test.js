@@ -1,21 +1,20 @@
-new Test().add([
+var ModuleTest = (function(global) {
+
+return new Test({
+        disable:    false,
+        node:       true,
+        browser:    true,
+        worker:     true,
+        button:     true,
+        both:       true,
+        primary:    global["Foo"],
+        secondary:  global["Foo_"],
+    }).add([
 //      testFoo_failure,
         testFoo_value,
         testFoo_isNumber,
         testFoo_isInteger,
-    ]).run(function(err, test) {
-        if (1) {
-            err || test.worker(function(err, test) {
-                if (!err && typeof Foo_ !== "undefined") {
-                    var name = Test.swap(Foo, Foo_);
-
-                    new Test(test).run(function(err, test) {
-                        Test.undo(name);
-                    });
-                }
-            });
-        }
-    });
+    ]).run().clone();
 
 function testFoo_failure(next) {
 
@@ -68,3 +67,4 @@ function testFoo_isInteger(next) {
     }
 }
 
+})((this || 0).self || global);
