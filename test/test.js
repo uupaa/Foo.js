@@ -1,14 +1,16 @@
-var ModuleTest = (function(global) {
+var ModuleTestFoo = (function(global) {
 
-return new Test({
+var _inNode    = "process"        in global;
+var _inWorker  = "WorkerLocation" in global;
+var _inBrowser = "document"       in global;
+
+return new Test("Foo", {
         disable:    false,
-        node:       true,
         browser:    true,
         worker:     true,
+        node:       true,
         button:     true,
         both:       true,
-        primary:    global["Foo"],
-        secondary:  global["Foo_"],
     }).add([
 //      testFoo_failure,
         testFoo_value,
@@ -17,9 +19,7 @@ return new Test({
     ]).run().clone();
 
 function testFoo_failure(next) {
-
-        console.error("testFoo_failure ng");
-        next && next.miss();
+    next && next.miss();
 }
 
 function testFoo_value(next) {
@@ -27,10 +27,8 @@ function testFoo_value(next) {
     var result = new Foo(123.4).value();
 
     if (result === 123.4) {
-        console.log("testFoo_value ok");
         next && next.pass();
     } else {
-        console.error("testFoo_value ng");
         next && next.miss();
     }
 }
@@ -43,10 +41,8 @@ function testFoo_isNumber(next) {
         ];
 
     if (!/false/.test(result.join())) {
-        console.log("testFoo_isNumber ok");
         next && next.pass();
     } else {
-        console.error("testFoo_isNumber ng");
         next && next.miss();
     }
 }
@@ -59,12 +55,11 @@ function testFoo_isInteger(next) {
         ];
 
     if (!/false/.test(result.join())) {
-        console.log("testFoo_isInteger ok");
         next && next.pass();
     } else {
-        console.error("testFoo_isInteger ng");
         next && next.miss();
     }
 }
 
 })((this || 0).self || global);
+
