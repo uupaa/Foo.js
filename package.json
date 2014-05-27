@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.foo.js",
-  "version":        "0.0.17",
+  "version":        "0.0.18",
   "description":    "The WebModule example.",
   "url":            "https://github.com/uupaa/Foo.js",
   "keywords":       ["Foo", "util", "uupaa", "WebModule"],
@@ -24,6 +24,7 @@
     "files":        ["lib/Foo.js"],
     "output":       "release/Foo.min.js",
     "target":       ["all"],
+    "labels":       ["@dev"],
     "module": {
       "develop":    ["uupaa.valid.js"],
       "release":    []
@@ -32,6 +33,7 @@
   "dependencies": {
   },
   "devDependencies": {
+    "uupaa.reflection.js": "",
     "uupaa.nodemodule.js": "",
     "uupaa.console.js": "",
     "uupaa.valid.js":   "",
