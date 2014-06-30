@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.foo.js",
-  "version":        "0.0.21",
+  "version":        "0.0.22",
   "description":    "The WebModule example.",
   "url":            "https://github.com/uupaa/Foo.js",
   "keywords":       ["Foo", "util", "uupaa", "WebModule", "Unstable"],
@@ -25,10 +25,10 @@
     "lint":         "node node_modules/uupaa.plato.js; open lint/plato/index.html"
   },
   "x-build": {
-    "files":        ["lib/Foo.js"],
+    "source":       ["lib/Foo.js"],
     "output":       "release/Foo.min.js",
     "target":       ["all"],
-    "labels":       ["@dev"],
+    "label":        ["@dev"],
     "module": {
       "develop":    ["uupaa.valid.js"],
       "release":    []
