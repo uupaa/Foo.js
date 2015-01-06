@@ -2,21 +2,21 @@
 
 [![npm](https://nodei.co/npm/uupaa.foo.js.png?downloads=true&stars=true)](https://nodei.co/npm/uupaa.foo.js/)
 
-Foo.js description.
+
 
 ## Document
 
 - [Foo.js wiki](https://github.com/uupaa/Foo.js/wiki/Foo)
-- [Development](https://github.com/uupaa/WebModule/wiki/Development)
-- [WebModule](https://github.com/uupaa/WebModule) ([Slide](http://uupaa.github.io/Slide/slide/WebModule/index.html))
+- [WebModule](https://github.com/uupaa/WebModule)
+    - [Slide](http://uupaa.github.io/Slide/slide/WebModule/index.html)
+    - [Development](https://github.com/uupaa/WebModule/wiki/Development)
 
-
-## How to use
+## Run on
 
 ### Browser
 
 ```js
-<script src="lib/Foo.js">
+<script src="lib/Foo.js"></script>
 <script>
 console.log( Foo() );
 </script>
@@ -33,8 +33,17 @@ console.log( Foo() );
 ### Node.js
 
 ```js
-var Foo = require("lib/Foo.js");
+require("lib/Foo.js");
 
 console.log( Foo() );
+```
+
+### node-webkit
+
+```js
+<script src="lib/Foo.js"></script>
+<script>
+console.log( Foo() );
+</script>
 ```
 

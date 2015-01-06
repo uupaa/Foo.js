@@ -1,3 +1,3 @@
-//module.exports = require("./bin/Zzz");
-module.exports = require("./lib/Zzz");
+//module.exports = require("./bin/Foo");
+module.exports = require("./lib/Foo");
 
