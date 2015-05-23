@@ -1,6 +1,6 @@
 {
   "name": "uupaa.foo.js",
-  "version": "0.0.27",
+  "version": "0.0.28",
   "description": "",
   "url": "https://github.com/uupaa/Foo.js",
   "keywords": ["uupaa", "WebModule", "Unstable"],
@@ -11,7 +11,7 @@
   "scripts": {
     "sync": "node ../WebModule/run/sync.js; npm update; node ../WebModule/run/page.js",
     "min": "node ../WebModule/run/minify.js --verbose --strict --keep --pretty",
-    "build": "node ../WebModule/run/minify.js --verbose --strict --keep --module",
+    "build": "node ../WebModule/run/minify.js --verbose --strict --keep --release",
     "watch": "node ../WebModule/run/watch.js --verbose --run hint",
     "page": "node ../WebModule/run/page.js --verbose",
     "test": "npm run min; npm run node; npm run browser",
@@ -20,7 +20,7 @@
     "browser": "open http://localhost:8000/Foo.js/test/index.html",
     "sim": "node ../WebModule/run/sim.js http://localhost:8000/Foo.js/test/index.html",
     "simx": "node ../WebModule/run/sim.js stop",
-    "hint": "jshint lib/*.js",
+    "hint": "eslint lib/*.js",
     "score": "node ../WebModule/run/score.js; open lint/plato/index.html",
     "patch": "node ../WebModule/run/patch.js",
     "setup": "node ../WebModule/run/setup.js",
@@ -47,7 +47,9 @@
       "output": "release/Foo.nw.min.js"
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "uupaa.hash.js": ""
+  },
   "devDependencies": {},
   "lib": "./lib/",
   "main": "./index.js",

@@ -1,35 +1,35 @@
 __history = [
   {
-    "date": "Mon, 17 Mar 2014 00:39:49 GMT",
+    "date": "Sat, 23 May 2015 23:13:42 GMT",
     "total": {
-      "sloc": 77,
-      "maintainability": 71.6635006375817
+      "sloc": 63,
+      "maintainability": 74.14751654872231
     },
     "average": {
-      "sloc": 77,
-      "maintainability": "71.66"
+      "sloc": 63,
+      "maintainability": "74.15"
     }
   },
   {
-    "date": "Tue, 18 Mar 2014 14:57:18 GMT",
+    "date": "Sat, 23 May 2015 23:15:06 GMT",
     "total": {
-      "sloc": 77,
-      "maintainability": 71.6635006375817
+      "sloc": 63,
+      "maintainability": 74.14751654872231
     },
     "average": {
-      "sloc": 77,
-      "maintainability": "71.66"
+      "sloc": 63,
+      "maintainability": "74.15"
     }
   },
   {
-    "date": "Tue, 06 Jan 2015 09:18:14 GMT",
+    "date": "Sat, 23 May 2015 23:15:11 GMT",
     "total": {
-      "sloc": 73,
-      "maintainability": 75.33689053451059
+      "sloc": 63,
+      "maintainability": 74.14751654872231
     },
     "average": {
-      "sloc": 73,
-      "maintainability": "75.34"
+      "sloc": 63,
+      "maintainability": "74.15"
     }
   }
 ]

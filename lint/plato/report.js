@@ -8,56 +8,87 @@ __report = {
         "link": "files/lib_Foo_js/index.html"
       },
       "jshint": {
-        "messages": 0
+        "messages": 1
       },
       "complexity": {
         "aggregate": {
-          "line": 1,
-          "complexity": {
-            "sloc": {
-              "physical": 73,
-              "logical": 20
+          "sloc": {
+            "logical": 34,
+            "physical": 63
+          },
+          "cyclomatic": 7,
+          "halstead": {
+            "operators": {
+              "distinct": 15,
+              "total": 73,
+              "identifiers": [
+                "__stripped__"
+              ]
             },
-            "cyclomatic": 6,
+            "operands": {
+              "distinct": 48,
+              "total": 109,
+              "identifiers": [
+                "__stripped__"
+              ]
+            },
+            "length": 182,
+            "vocabulary": 63,
+            "difficulty": 17.03125,
+            "volume": 1087.8649460769848,
+            "effort": 18527.699862873647,
+            "bugs": 0.36262164869232827,
+            "time": 1029.316659048536
+          },
+          "params": 11,
+          "line": 1,
+          "cyclomaticDensity": 20.588235294117645,
+          "complexity": {
+            "cyclomatic": 7,
+            "sloc": {
+              "logical": 34,
+              "physical": 63
+            },
             "halstead": {
               "operators": {
                 "distinct": 15,
-                "total": 46,
+                "total": 73,
                 "identifiers": [
                   "__stripped__"
                 ]
               },
               "operands": {
-                "distinct": 27,
-                "total": 55,
+                "distinct": 48,
+                "total": 109,
                 "identifiers": [
                   "__stripped__"
                 ]
               },
-              "length": 101,
-              "vocabulary": 42,
-              "difficulty": 15.277777777777779,
-              "volume": 544.6240597006548,
-              "effort": 8320.645356537781,
-              "bugs": 0.1815413532335516,
-              "time": 462.2580753632101
-            },
-            "params": 2
+              "length": 182,
+              "vocabulary": 63,
+              "difficulty": 17.03125,
+              "volume": 1087.8649460769848,
+              "effort": 18527.699862873647,
+              "bugs": 0.36262164869232827,
+              "time": 1029.316659048536
+            }
           }
         },
         "module": "lib/Foo.js",
-        "maintainability": 75.33689053451059
+        "maintainability": 74.14751654872231
       }
     }
   ],
   "summary": {
     "total": {
-      "sloc": 73,
-      "maintainability": 75.33689053451059
+      "jshint": 1,
+      "sloc": 63,
+      "maintainability": 74.14751654872231
     },
     "average": {
-      "sloc": 73,
-      "maintainability": "75.34"
+      "sloc": 63,
+      "maintainability": "74.15",
+      "jshint": "1.00"
     }
   }
 }

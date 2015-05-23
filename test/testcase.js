@@ -1,10 +1,6 @@
 var ModuleTestFoo = (function(global) {
 
-var _isNodeOrNodeWebKit = !!global.global;
-var _runOnNodeWebKit =  _isNodeOrNodeWebKit &&  /native/.test(setTimeout);
-var _runOnNode       =  _isNodeOrNodeWebKit && !/native/.test(setTimeout);
-var _runOnWorker     = !_isNodeOrNodeWebKit && "WorkerLocation" in global;
-var _runOnBrowser    = !_isNodeOrNodeWebKit && "document" in global;
+global["BENCHMARK"] = false;
 
 var test = new Test("Foo", {
         disable:    false, // disable all tests.
@@ -13,24 +9,33 @@ var test = new Test("Foo", {
         node:       true,  // enable node test.
         nw:         true,  // enable nw.js test.
         button:     true,  // show button.
-        both:       true,  // test primary and secondary modules.
+        both:       true,  // test the primary and secondary modules.
         ignoreError:false, // ignore error.
+        callback:   function() {
+        },
+        errorback:  function(error) {
+        }
     }).add([
+        // generic test
         testFoo_value,
         testFoo_concat,
-        testFoo_concat$,
     ]);
 
-if (_runOnBrowser || _runOnNodeWebKit) {
-    //test.add([]);
-} else if (_runOnWorker) {
-    //test.add([]);
-} else if (_runOnNode) {
-    //test.add([]);
+if (IN_BROWSER || IN_NW) {
+    test.add([
+        // browser and node-webkit test
+    ]);
+} else if (IN_WORKER) {
+    test.add([
+        // worker test
+    ]);
+} else if (IN_NODE) {
+    test.add([
+        // node.js and io.js test
+    ]);
 }
 
-return test.run().clone();
-
+// --- test cases ------------------------------------------
 function testFoo_value(test, pass, miss) {
 
     var instance = new Foo("a");
@@ -53,26 +58,14 @@ function testFoo_concat(test, pass, miss) {
             1: new Foo("b").concat("b") === "bb" // true
         };
 
-    if (/false/.test(JSON.stringify(result, null, 2))) {
+    if ( /false/.test(JSON.stringify(result)) ) {
         test.done(miss());
     } else {
         test.done(pass());
     }
 }
 
-function testFoo_concat$(test, pass, miss) {
+return test.run();
 
-    var result = {
-            0: new Foo(   ).concat$("a").value === "a", // true
-            1: new Foo("b").concat$("b").value === "bb" // true
-        };
-
-    if (/false/.test(JSON.stringify(result, null, 2))) {
-        test.done(miss());
-    } else {
-        test.done(pass());
-    }
-}
-
-})((this || 0).self || global);
+})(GLOBAL);
 

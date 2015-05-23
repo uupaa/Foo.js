@@ -13,12 +13,12 @@
 
 ## Run on
 
-### Browser
+### Browser and node-webkit
 
 ```js
 <script src="lib/Foo.js"></script>
 <script>
-console.log( Foo() );
+    ...
 </script>
 ```
 
@@ -27,7 +27,6 @@ console.log( Foo() );
 ```js
 importScripts("lib/Foo.js");
 
-console.log( Foo() );
 ```
 
 ### Node.js
@@ -35,15 +34,5 @@ console.log( Foo() );
 ```js
 require("lib/Foo.js");
 
-console.log( Foo() );
-```
-
-### node-webkit
-
-```js
-<script src="lib/Foo.js"></script>
-<script>
-console.log( Foo() );
-</script>
 ```
 
